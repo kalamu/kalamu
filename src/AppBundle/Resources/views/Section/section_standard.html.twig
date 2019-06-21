@@ -1,0 +1,18 @@
+<section id="{{id_css}}" class="{{class}} container-fluid">
+    {% for child in _content.childs %}
+        {% if child.type == 'row' %}
+            {%set row = child.datas %}
+            <div class="row">
+                {% for col in row.cols %}
+                <div class="col-md-{{col.md}}">
+                    {% for widget in col.widgets %}
+                        {{render_dashboard_element('cms', widget.type, widget.identifier, widget.params)}}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        {% elseif child.type == 'section' %}
+            {{render_dashboard_element('cms', child.datas.type, child.datas.identifier, child.datas.params, (child.datas._content is defined ? child.datas._content : null))}}
+        {% endif %}
+    {% endfor %}
+</section>

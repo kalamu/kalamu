@@ -1,0 +1,5 @@
+{% extends 'AppBundle:Site:base.html.twig' %}
+{% block site_title %}Erreur {{ status_code }} . {{parent()}} {% endblock site_title %}
+{% block content %}
+    <h1>Oops, 404 ERROR : The requested page does not exist</h1>
+{% endblock %}

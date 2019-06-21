@@ -1,0 +1,33 @@
+services:
+
+    # Registry of dashboard managers
+    kalamu.dashboard_registry:
+        class: AppBundle\Manager\DashboardRegistry
+
+    # Stockage de dashboard sur utilisateur
+    kalamu.dashboard.manager.user:
+        class: AppBundle\Manager\DashboardUserManager
+        arguments: ['@doctrine', '@security.context']
+        tags:
+            - { name: dashboard_storage , alias: user }
+
+    # block sonata for administration homepage (display the dashboard)
+    kalamu.sonata_block.dashboard:
+        class: AppBundle\SonataBlock\DashboardBlock
+        arguments:
+            - '@twig'
+        tags:
+            - { name: sonata.block }
+
+
+    # Security voter to give full access to the super admin
+    kalamu.security.voter.super_admin:
+        class: AppBundle\Voter\SuperAdminVoter
+        public: false
+        tags:
+            - { name: security.voter }
+
+
+    # Section elements for content edition
+    kalamu_cms.element.cms.section_standard:
+        class: AppBundle\Section\SectionStandard

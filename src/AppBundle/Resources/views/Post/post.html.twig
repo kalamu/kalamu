@@ -1,0 +1,31 @@
+{% extends (parent_template is defined ? parent_template : 'AppBundle:Site:base.html.twig') %}
+{% block site_title %}{{content.title}} . Posts . {{parent()}}{% endblock site_title %}
+
+{% block content %}
+
+    <article>
+        <h1>{{content.title}}</h1>
+
+        <p>{{content.resume|nl2br}}</p>
+
+        {% if content.image %}
+            <img src="{{ content.image|imagine_filter('post_fullsize') }}" alt="" class="img-responsive center-block">
+        {% endif %}
+
+        <div class="container-fluid">
+            {% set datas = content.contenu|json_decode %}
+            {% include 'AppBundle:Site:_wysiwyg_dashboard_content.html.twig' %}
+        </div>
+
+        <hr>
+        <p>Published by {{content.createdBy}}, the {{content.publishedAt|format_datetime}}
+        {% for taxonomy in content.getUsedTaxonomies() %}
+            <p><strong>{{taxonomy}}:</strong>
+            {% for term in content.getTermsOfTaxonomy(taxonomy) %}
+                <a href="{{cms_link('read', term)}}"><i class="fa fa-tag"></i> {{term}}</a>
+            {% endfor %}
+            </p>
+        {% endfor %}
+    </article>
+
+{% endblock %}

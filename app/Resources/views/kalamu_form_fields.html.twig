@@ -1,0 +1,11 @@
+{% extends 'KalamuCmsAdminBundle:Form:fields.html.twig' %}
+
+{% block cms_link_selector_widget %}
+    {{ parent() }}
+    {{ block('sonata_help') }}
+{% endblock cms_link_selector_widget %}
+
+{% block geolocalisation_map_widget %}
+    {{ parent() }}
+    {{ block('sonata_help') }}
+{% endblock geolocalisation_map_widget %}

@@ -1,0 +1,19 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+
+{% block sonata_page_content %}
+    <div class="content">
+        <div class="sonata-ba-show">
+            <div class="sonata-ba-view">
+                <section class="row">
+                    <aside class="col-xs-6 col-sm-3">
+                        {{render(controller('KalamuDynamiqueConfigBundle:DynamiqueConfigurator:aside'))}}
+                    </aside>
+                    <div class="col-xs-6 col-sm-9">
+                        {{block('configurator')}}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+{% endblock %}

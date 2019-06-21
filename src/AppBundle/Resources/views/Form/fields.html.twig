@@ -1,0 +1,64 @@
+{% extends 'form_div_layout.html.twig' %}
+
+{% block form_row %}
+    {% spaceless %}
+        <div class="form-group">
+            {% if not form.vars.valid %}
+                <div class="pi-alert-danger fade in animated flash">
+                    <button type=button" class="pi-close" data-dismiss="alert"><i class="icon-cancel"></i></button>
+                    <p>{{ form_errors(form) }}</p>
+                </div>
+            {% endif %}
+
+            {% if form.vars.choices is defined %}
+                {% for radio in form %}
+                    <div class="radio">
+                        <label>
+                            {{ (loop.first) ? form_widget(radio, {checked: true}) : form_widget(radio) }}
+                            {{radio.vars.label}}
+                        </label>
+                    </div>
+                {% endfor %}
+            {% elseif form.vars.checked is defined %}
+                <label>
+                    {{ form_widget(form) }}
+                    {{form.vars.label}}
+                </label>
+            {% else %}
+                <div class="pi-input-with-icon {{ (errors|length>0)? 'has-errors': '' }}">
+                    <div class="pi-input-icon">
+                        {% for attrname,attrvalue in attr %}
+                            {% if attrname == 'icon' %}
+                                <i class="{{ attrvalue }}"></i>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    {{ form_widget(form) }}
+                </div>
+            {% endif %}
+
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}
+
+{% block textarea_widget %}
+    {% spaceless %}
+        <textarea {{ block('widget_attributes') }}></textarea>
+    {% endspaceless %}
+{% endblock textarea_widget %}
+
+{% block form_errors %}
+    {% spaceless %}
+        {% if errors|length > 1 %}
+            <ul>
+                {% for error in errors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+            </ul>
+        {% elseif errors|length > 0 %}
+            {% for error in errors %}
+                {{ error.message }}
+            {% endfor %}
+        {% endif %}
+    {% endspaceless %}
+{% endblock form_errors %}

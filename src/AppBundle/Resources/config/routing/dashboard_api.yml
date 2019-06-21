@@ -1,0 +1,18 @@
+dashboard_api_base_api:
+    path:     /{manager}/
+    defaults: { _controller: AppBundle:API/DashboardApi:get }
+
+dashboard_api_get:
+    path:     /{manager}/{identifier}
+    defaults: { _controller: AppBundle:API/DashboardApi:get }
+    methods: [GET]
+
+dashboard_api_set:
+    path:     /{manager}/{identifier}
+    defaults: { _controller: AppBundle:API/DashboardApi:set }
+    methods: [POST]
+
+dashboard_api_remove:
+    path:     /{manager}/{identifier}
+    defaults: { _controller: AppBundle:API/DashboardApi:remove }
+    methods: [DELETE]

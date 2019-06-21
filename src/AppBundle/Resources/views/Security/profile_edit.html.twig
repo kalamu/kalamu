@@ -1,0 +1,109 @@
+{% extends "SonataAdminBundle::standard_layout.html.twig" %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{% block sonata_admin_content %}
+    {% trans_default_domain 'FOSUserBundle' %}
+
+    {% block notice %}
+        {% include 'SonataCoreBundle:FlashMessage:render.html.twig' %}
+    {% endblock notice %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="col-md-2">
+                        <div class="box-profile text-center" style="margin-top:2em">
+                            <i class="fa fa-user-circle-o fa-5x "></i>
+                            <h3 class="profile-username text-center">{{ user.username }}</h3>
+                            <p class="text-muted text-center">{{ user.email }}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-10">
+
+                        <h4 class="box-title ">
+                            Edit my profile
+                        </h4>
+
+                        {{ form_start(form) }}
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    {{ form_row(form.email) }}
+                                    {{ form_row(form.plainPassword) }}
+                                </div>
+                                <div class="col-md-4">
+                                    <div id="passwordInfo" style="display: none;">
+                                        <h4>Password strength : <strong></strong></h4>
+
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            </div>
+                                        </div>
+
+                                        <p>
+                                            The strength of your password depends on it's length
+                                            and diversity of used characters. Think to use letters,
+                                            numbers and special characters.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save</button>
+                                <a href="{{path('fos_user_security_profile')}}" class="btn btn-default"><i class="fa fa-times"></i> Cancel</a>
+                            </div>
+                            {{ form_rest(form) }}
+                        {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock sonata_admin_content %}
+
+
+{% block javascripts_footer %}
+    <script src="{{asset('bundles/app/js/passwordStrengthMeter.js')}}"></script>
+    <script>
+    $(function(){
+        var passwordStrengthMeter = {
+            'Trop faible':  {class: 'danger', progress: 'red', nbBlock: 1},
+            'Faible':       {class: 'danger', progress: 'red', nbBlock: 2},
+            'Moyen':        {class: 'warning', progress: 'yellow', nbBlock: 3},
+            'Fort':         {class: 'success', progress: 'green', nbBlock: 4}
+        };
+
+        $('#{{form.plainPassword.first.vars.id}}').on('change keyup', function(){
+            var passwordStrength = Math.min(100, checkPasswordStrength($(this).val()));
+            console.log('Force :'+passwordStrength);
+            var strength;
+            if(passwordStrength <= 40){
+                strength = 'Trop faible';
+            }else if(passwordStrength <= 50){
+                strength = 'Faible';
+            }else if(passwordStrength <= 60){
+                strength = 'Moyen';
+            }else{
+                strength = 'Fort';
+            }
+
+            if($(this).val().length > 0){
+                $('#passwordInfo').show();
+                $('#passwordInfo h4 strong').attr('class', 'text-'+passwordStrengthMeter[strength].class).text(strength);
+
+                $('#passwordInfo .progress-bar').attr('class', 'progress-bar progress-bar-'+passwordStrengthMeter[strength].progress)
+                        .attr('aria-valuenow', passwordStrength)
+                        .css('width', passwordStrength+'%');
+            }else{
+                $('#passwordInfo').hide();
+            }
+        });
+    });
+</script>
+{% endblock %}

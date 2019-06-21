@@ -1,0 +1,14 @@
+{% extends (parent_template is defined ? parent_template : 'AppBundle:Site:base.html.twig') %}
+{% block site_title %}Posts . {{parent()}}{% endblock site_title %}
+
+{% block content %}
+
+    <h1>Post list</h1>
+
+    {% include 'AppBundle:Content:list.html.twig' %}
+
+    <hr>
+
+    {% include 'AppBundle:Content:paginator.html.twig' %}
+
+{% endblock %}

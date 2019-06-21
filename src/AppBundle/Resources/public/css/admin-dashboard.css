@@ -1,0 +1,138 @@
+*{
+    border-radius: 0 !important;
+}
+
+.content-wrapper, .right-side,
+.skin-black .main-header>.logo,
+.skin-black .main-header>.logo:hover,
+.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side{
+    background: #ecf0f5;
+}
+.skin-black .main-sidebar{
+    background: rgba(44, 108, 211,.8);
+}
+.skin-black .sidebar a{
+    color: white;
+    font-weight: bold;
+}
+.skin-black .sidebar-form input[type="text"], .skin-black .sidebar-form .btn{
+    background-color: rgba(255,255,255,.8) !important;
+}
+.skin-black .sidebar-form input[type="text"]:focus{
+    background-color: rgba(255,255,255,1) !important;
+}
+.skin-black .sidebar-form{
+    border: 1px solid #ccc !important;
+}
+.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a {
+    color: white;
+    background: rgba(255,255,255,.2);
+    border-left-color: white;
+}
+.nav>li>a:hover,
+.nav>li>a:active,
+.nav>li>a:focus{
+    background: rgba(255,255,255,.2) !important;
+}
+.skin-black .sidebar-menu>li>.treeview-menu {
+    margin: 0 1px;
+    background: rgba(255,255,255,.4);
+}
+.skin-black .treeview-menu>li>a:hover,
+.skin-black .treeview-menu>li>a{
+    color: white;
+}
+
+.treeview .sidebar-title{
+    margin-left: 10px;
+}
+
+.tile_count .tile_stats_count, ul.quick-list li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tile_count .tile_stats_count .count {
+    font-size: 40px;
+}
+.tile_count .tile_stats_count .count {
+    font-size: 30px;
+    line-height: 47px;
+    font-weight: 600;
+}
+
+.green {
+    color: #1ABB9C;
+}
+
+@media (min-width: 768px){
+
+}
+
+.kalamu-dashboard-section{
+    margin: 15px 0 !important;
+    background: whitesmoke !important;
+}
+.kalamu-dashboard-section .visible-editing-row{
+    left: 5px !important;
+}
+.modal .modal-body{
+    border-top: 1px solid #ddd;
+}
+
+
+.modal .tab-block .nav li:last-child{border-bottom:none}
+.modal .tab-block .nav li.active{
+    border-right: 0;
+    background: white;
+}
+.modal .tab-block .nav li{
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+.modal .tab-block .nav {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.modal .tab-block .tab-content .panel-body{
+    padding-top: 0;
+}
+.modal .tab-block .tab-content .table>tbody>tr:first-child>td{
+    border-top: 0;
+}
+.modal .tab-block .tab-content {
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: rgba(255,255,255,.5) !important;
+}
+.skin-blue .sidebar a {
+    color: white !important;
+}
+.sidebar-menu .treeview-menu>li>a:hover,
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a,
+.skin-blue .sidebar-menu>li>.treeview-menu,
+.skin-blue .sidebar {
+    background: rgba(255,255,255,.2) !important;
+}
+.skin-blue .sidebar {
+    background: rgba(60, 141, 188, .8) !important;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a{
+    border-left-color: white !important;
+}
+
+.modal-footer.elementForm{
+    text-align: left;
+}
+
+.navbar-top-links li span{
+    color: #fff;
+}

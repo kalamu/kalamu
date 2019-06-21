@@ -1,0 +1,40 @@
+kalamu_cms_admin:
+    resource: "@KalamuCmsAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+_bazinga_jstranslation:
+    resource: "@BazingaJsTranslationBundle/Resources/config/routing/routing.yml"
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+sonata_admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+kalamu_default_app:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+elfinder:
+     resource: "@FMElfinderBundle/Resources/config/routing.yml"
+     prefix:  /admin
+
+kalamu_dashboard:
+    resource: "@KalamuDashboardBundle/Resources/config/routing.yml"
+    prefix:   /admin/dashboard/api
+
+kalamu_dynamique_config_admin:
+    resource: "@KalamuDynamiqueConfigBundle/Resources/config/routing_admin.yml"
+    prefix:   /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+
+# Must be at the end to get all routes that are not static
+kalamuCmsCoreBundle:
+    resource: .
+    type: kalamu_cms_core
+    prefix: /

@@ -1,0 +1,50 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    <div class='col-md-12'>
+    <div id="dashboard-tabs"></div>
+    </div>
+
+    <link href="{{ asset('bundles/kalamudashboard/css/dashboard.css')}}" type="text/css" rel="stylesheet" media="screen" />
+
+
+    <script type="text/javascript" src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('bazinga_jstranslation_js', {'domain': 'kalamu'}) }}"></script>
+
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/widget.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/col.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/row.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/section.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/explorer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard/generic-row.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/kalamudashboard/js/dashboard.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/app/js/dashboard-tabs.js') }}"></script>
+
+    <script type="text/javascript">
+    $(function(){
+        Translator.locale = '{{app.request.getLocale()}}';
+
+        // Explorer for widgets
+        explorerWidget = $('<div>').appendTo('body').kalamuElementExplorer({
+            element_api: '{{path('api_element_base_url')}}',
+            element_context: 'user_dashboard',
+            type: 'cms.infos',
+            modalOptions: {backdrop: 'static'}
+        });
+
+        $('#dashboard-tabs').kalamuDashboardTabs({
+            dashboard_api: '{{path('dashboard_api_base_api', {manager: 'user'})}}',
+            identifier: 'app_default',
+            explorerWidget: explorerWidget,
+            enable_widget: true,
+            editing: true
+        });
+
+    });
+    </script>
+    <style>
+        .pn{padding:0;}
+        .kalamu-dashboard-col .col-widgets{padding: 0;}
+        .kalamu-dashboard{margin-top:0.5em;}
+    </style>
+{% endblock %}

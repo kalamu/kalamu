@@ -1,0 +1,51 @@
+security:
+    encoders:
+        Kalamu\CmsAdminBundle\Entity\User:
+            algorithm: bcrypt
+            cost: 15
+            encode_as_base64: false
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_USER_MANAGER: [ROLE_USER_SHOW, ROLE_USER_NEW, ROLE_USER_EDIT, ROLE_USER_DELETE]
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH, ROLE_USER_MANAGER]
+
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        admin:
+            pattern: ^/admin
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+                check_path: fos_user_security_check
+                login_path: fos_user_security_login
+                always_use_default_target_path: true
+                default_target_path: /admin/dashboard
+            logout:
+                path: /admin/logout
+                target: /admin/login
+            anonymous:    ~
+
+        public:
+            pattern: ^/
+            security: false
+
+
+    access_control:
+        - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/dynamique-config, roles: ROLE_ADMIN_CONFIGURATION }
+
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/efconnect, roles: ROLE_ADMIN }
+        - { path: ^/elfinder, roles: ROLE_ADMIN }
+
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }

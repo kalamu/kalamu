@@ -1,0 +1,18 @@
+
+parameters:
+    database_driver:    pdo_pgsql
+    database_host:      localhost
+    database_port:      5432
+    database_name:      kalamu
+    database_user:      postgres
+    database_password:  password
+
+    mailer_transport:   smtp
+    mailer_host:        127.0.0.1
+    mailer_user:        ~
+    mailer_password:    ~
+
+    locale:             fr
+    secret:             3d3b597a0064620f43a2080eeb9257f0
+
+    main_domain:        example.com

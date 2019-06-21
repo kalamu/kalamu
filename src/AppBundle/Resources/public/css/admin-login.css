@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.content-wrapper{
+    margin: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    background: rgba(0,0,0,.05) !important;
+}
+.form-wrapper{
+    max-width: 700px;
+    width: 80%;
+    margin: auto;
+    vertical-align: middle;
+    padding: 30px;
+    background: red;
+    border-radius: 3px;
+
+    margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+    transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+    background: rgba(255,255,255,0.9);
+    padding: 30px 40px;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#E6FFFFFF', endColorstr='#E6FFFFFF');
+    z-index: 999999999;
+    -webkit-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    zoom: 1;
+}
+.form-wrapper img{
+    width: initial;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.form-wrapper img.visible-xs{
+    max-height: 150px;
+}
+
+.form-wrapper .form-group{
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
+.form-wrapper .form-group .input-group{
+    width: 100%;
+}
+
+.form-wrapper .btn{
+    border-radius: 0;
+    display: block;
+    width: 100%;
+}

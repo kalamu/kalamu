@@ -1,0 +1,29 @@
+
+
+# Routes for login / check login / logout
+fos_user_security_login:
+    path:     /login
+    defaults: { _controller: AppBundle:Admin\Security:login }
+
+fos_user_security_check:
+    path:     /login_check
+    defaults: { _controller: AppBundle:Admin\Security:check }
+
+fos_user_security_logout:
+    path:     /logout
+    defaults: { _controller: AppBundle:Admin\Security:logout }
+
+# Routes for user profile
+fos_user_security_profile:
+    path:     /profile
+    defaults: { _controller: AppBundle:Admin\Security:profile }
+
+fos_user_security_profile_edit:
+    path:     /profile/edit
+    defaults: { _controller: AppBundle:Admin\Security:profileEdit }
+
+
+# Route for the dashboards API (admin homepage and edition)
+kalamu_default_site_dashboard_api:
+    resource: "@AppBundle/Resources/config/routing/dashboard_api.yml"
+    prefix:   /dashboard_storage/api

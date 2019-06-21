@@ -1,0 +1,25 @@
+
+{% for key, content in paginator if paginator.getPageCount > 0 %}
+    <article class="row">
+        <div class="col-md-3">
+            {% if content.image %}
+                <a href="{{cms_link('read', content)}}">
+                    <img src="{{content.image | imagine_filter('post_thumbnail')}}" class="img-responsive" alt="">
+                </a>
+            {% endif %}
+        </div>
+        <div class="col-md-9">
+            <h2><a href="{{cms_link('read', content)}}">{{content.title}}</a></h2>
+            <p>{{content.resume|nl2br}}</p>
+            <p>Published by {{content.createdBy}}, the {{content.publishedAt|format_datetime}}
+            {% for taxonomy in content.getUsedTaxonomies() %}
+                <p><strong>{{taxonomy}}:</strong>
+                {% for term in content.getTermsOfTaxonomy(taxonomy) %}
+                    <a href="{{cms_link('read', term)}}"><i class="fa fa-tag"></i> {{term}}</a>
+                {% endfor %}
+                </p>
+            {% endfor %}
+        </div>
+    </article>
+{% endfor %}
+
