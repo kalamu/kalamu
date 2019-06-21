@@ -80,6 +80,8 @@ php app/console doctrine:schema:update --force
 php app/console stfalcon:tinymce:symlink
 php app/console doctrine:fixtures:load
 php app/console cache:clear --env=prod
+php app/console assets:install --symlink
+php app/console assetic:dump --env=prod
 ```
 
 Then got to the administration interface at the `/admin` page.
