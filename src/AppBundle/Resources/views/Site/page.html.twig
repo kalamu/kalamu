@@ -15,6 +15,6 @@
     </section>
 
     <hr class="clearfix">
-    {% set datas = content.contenu|json_decode %}
+    {% set datas = content.content|json_decode %}
     {% include 'AppBundle:Site:_wysiwyg_dashboard_content.html.twig' %}
 {% endblock %}
