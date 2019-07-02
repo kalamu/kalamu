@@ -1,3 +1,20 @@
-<li><a href="{{path('fos_user_security_profile')}}"><i class="fa fa-user fa-hw"></i> View my profile</a></li>
-<li><a href="{{path('fos_user_security_profile_edit')}}"><i class="fa fa-edit fa-hw"></i> Edit my profile</a></li>
-<li><a href="{{path('fos_user_security_logout')}}"><i class="fa fa-sign-out fa-hw"></i> Logout</a></li>
+{% trans_default_domain 'kalamu' %}
+
+<li>
+    <a href="{{path('fos_user_security_profile')}}">
+        <i class="fa fa-user fa-hw"></i> 
+        {{ 'View my profile'|trans }}
+    </a>
+</li>
+<li>
+    <a href="{{path('fos_user_security_profile_edit')}}">
+        <i class="fa fa-edit fa-hw"></i> 
+        {{ 'Edit my profile'|trans }}
+    </a>
+</li>
+<li>
+    <a href="{{path('fos_user_security_logout')}}">
+        <i class="fa fa-sign-out fa-hw"></i> 
+        {{ 'Logout'|trans }}
+    </a>
+</li>

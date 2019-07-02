@@ -1,17 +1,19 @@
+{% trans_default_domain 'kalamu' %}
+
 {% if paginator.getPageCount > 1 %}
-<nav aria-label="Page navigation">
+<nav aria-label="{{ 'Page navigation'|trans }}">
     <ul class="pagination">
         {% if paginator.getPageCount > paginator.getCurrentPageNumber %}
         <li>
-            <a href="{{cms_link('index', 'post', {page: (paginator.getCurrentPageNumber+1), _context: cms_current_context()})}}" aria-label="Previous">
-                <i class="fa fa-angle-double-left"></i> Previous page
+            <a href="{{cms_link('index', 'post', {page: (paginator.getCurrentPageNumber+1), _context: cms_current_context()})}}" aria-label="{{ 'Previous'|trans }}">
+                <i class="fa fa-angle-double-left"></i> {{ 'Previous page'|trans }}
             </a>
         </li>
         {% endif %}
         {% if paginator.getCurrentPageNumber > 1 %}
         <li>
-            <a href="{{cms_link('index', 'post', {page: (paginator.getCurrentPageNumber-1), _context: cms_current_context()})}}" aria-label="Next">
-                Next page <i class="fa fa-angle-double-right"></i>
+            <a href="{{cms_link('index', 'post', {page: (paginator.getCurrentPageNumber-1), _context: cms_current_context()})}}" aria-label="{{ 'Next'|trans }}">
+                {{ 'Next page'|trans }} <i class="fa fa-angle-double-right"></i>
             </a>
         </li>
         {% endif %}

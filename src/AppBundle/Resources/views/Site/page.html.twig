@@ -1,5 +1,7 @@
 {% extends 'AppBundle:Site:base.html.twig' %}
 
+{% trans_default_domain 'kalamu' %}
+
 {% if app.request.attributes.get('is_home') == false %}
     {% block site_title %}{{content.title}} | {{parent()}}{% endblock site_title %}
 {% endif %}
@@ -9,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{content.title}}</h1>
-                <span class="text-muted pull-right">Last update {{content.updatedAt|format_datetime}}</span>
+                <span class="text-muted pull-right">{{ 'Last update'|trans }} {{content.updatedAt|format_datetime}}</span>
             </div>
         </div>
     </section>

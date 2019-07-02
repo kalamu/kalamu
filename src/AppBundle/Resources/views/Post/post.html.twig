@@ -1,5 +1,6 @@
 {% extends (parent_template is defined ? parent_template : 'AppBundle:Site:base.html.twig') %}
-{% block site_title %}{{content.title}} . Posts . {{parent()}}{% endblock site_title %}
+{% trans_default_domain 'kalamu' %}
+{% block site_title %}{{content.title}} . {{ 'Posts'|trans }} . {{parent()}}{% endblock site_title %}
 
 {% block content %}
 
@@ -18,7 +19,7 @@
         </div>
 
         <hr>
-        <p>Published by {{content.createdBy}}, the {{content.publishedAt|format_datetime}}
+        <p>{{ 'Published by %name%, the %date%'|trans({'%name%': content.createdBy, '%date%': content.publishedAt|format_datetime}) }}
         {% for taxonomy in content.getUsedTaxonomies() %}
             <p><strong>{{taxonomy}}:</strong>
             {% for term in content.getTermsOfTaxonomy(taxonomy) %}
