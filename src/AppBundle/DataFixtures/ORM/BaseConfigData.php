@@ -84,7 +84,7 @@ class BaseConfigData extends AbstractFixture implements OrderedFixtureInterface,
     {
         $page = new Page();
         $page->setTitle("Homepage");
-        $page->setContenu('{"childs":[{},{"type":"row","datas":{"col":"1","cols":[{"md":12,"widgets":[{"context":"cms","type":"cms.content","identifier":"kalamu_cms.element.cms.wysiwyg","params":[{"name":"form[content]","value":"<h1 style=\"text-align: center;\"><strong>Congratulations, KalamuCMS is installed !</strong></h1>\r\n<p style=\"text-align: center;\">You can now use the <a href=\"/admin/dynamique-config\">administration interface</a> to start configuring your website.</p>"},{"name":"parent_md_size","value":12}]}],"responsive":{"visible":["lg","md","sm","xs"],"size":{"lg":12,"md":12,"sm":12,"xs":12},"class":"","id":""}}],"responsive":{"visible":["lg","md","sm","xs"],"class":"","id":""}}}]}');
+        $page->setContent('{"childs":[{},{"type":"row","datas":{"col":"1","cols":[{"md":12,"widgets":[{"context":"cms","type":"cms.content","identifier":"kalamu_cms.element.cms.wysiwyg","params":[{"name":"form[content]","value":"<h1 style=\"text-align: center;\"><strong>Congratulations, KalamuCMS is installed !</strong></h1>\r\n<p style=\"text-align: center;\">You can now use the <a href=\"/admin/dynamique-config\">administration interface</a> to start configuring your website.</p>"},{"name":"parent_md_size","value":12}]}],"responsive":{"visible":["lg","md","sm","xs"],"size":{"lg":12,"md":12,"sm":12,"xs":12},"class":"","id":""}}],"responsive":{"visible":["lg","md","sm","xs"],"class":"","id":""}}}]}');
         $page->setPublishStatus($this->getReference('published-page'));
         $page->setCreatedBy($this->getReference('admin-user'));
         $page->setUpdatedBy($this->getReference('admin-user'));
