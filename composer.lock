@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13e4e2b2435e73c00d75870a19a7e60d",
+    "content-hash": "62886a96f7ffabb559a1d0ff8b358b54",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1967,16 +1967,16 @@
         },
         {
             "name": "kalamu/cms-admin-bundle",
-            "version": "1.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-admin-bundle.git",
-                "reference": "25f45cd49decfe7ad00eae904a5608825345eea0"
+                "reference": "16cc1b6716a596e45e0e6a4fbe02e62799f1964f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/25f45cd49decfe7ad00eae904a5608825345eea0",
-                "reference": "25f45cd49decfe7ad00eae904a5608825345eea0",
+                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/16cc1b6716a596e45e0e6a4fbe02e62799f1964f",
+                "reference": "16cc1b6716a596e45e0e6a4fbe02e62799f1964f",
                 "shasum": ""
             },
             "require": {
@@ -2012,20 +2012,20 @@
                 }
             ],
             "description": "Administration interface for Kalamu CMS",
-            "time": "2019-06-20T13:58:13+00:00"
+            "time": "2019-06-28T13:53:07+00:00"
         },
         {
             "name": "kalamu/cms-core-bundle",
-            "version": "1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-core-bundle.git",
-                "reference": "4be1835acebb8020ed0d08465b15ec0788850e14"
+                "reference": "9f2db91c1c8b93b744ed05d8a87997341dbd83f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/4be1835acebb8020ed0d08465b15ec0788850e14",
-                "reference": "4be1835acebb8020ed0d08465b15ec0788850e14",
+                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/9f2db91c1c8b93b744ed05d8a87997341dbd83f3",
+                "reference": "9f2db91c1c8b93b744ed05d8a87997341dbd83f3",
                 "shasum": ""
             },
             "require": {
@@ -2061,20 +2061,20 @@
                 }
             ],
             "description": "Core functionalites for Kalamu CMS",
-            "time": "2019-06-19T12:59:51+00:00"
+            "time": "2019-06-28T13:04:54+00:00"
         },
         {
             "name": "kalamu/dashboard-bundle",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/dashboard-bundle.git",
-                "reference": "0303aaf38242c7e694e536b912aeeddea511692d"
+                "reference": "faadccdccb4912b6385b0c6848ef1fa26e97eea8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/dashboard-bundle/zipball/0303aaf38242c7e694e536b912aeeddea511692d",
-                "reference": "0303aaf38242c7e694e536b912aeeddea511692d",
+                "url": "https://api.github.com/repos/kalamu/dashboard-bundle/zipball/faadccdccb4912b6385b0c6848ef1fa26e97eea8",
+                "reference": "faadccdccb4912b6385b0c6848ef1fa26e97eea8",
                 "shasum": ""
             },
             "require": {
@@ -2105,7 +2105,7 @@
                 }
             ],
             "description": "Configurable Bootstrap dashboard for Kalamu",
-            "time": "2018-10-12T13:23:53+00:00"
+            "time": "2019-01-25T05:16:33+00:00"
         },
         {
             "name": "kalamu/dynamique-config-bundle",
@@ -6615,7 +6615,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "kalamu/cms-admin-bundle": 20,
+        "kalamu/cms-core-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

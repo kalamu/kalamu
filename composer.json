@@ -29,8 +29,8 @@
         "sonata-project/doctrine-orm-admin-bundle": "^3.1",
         "tinymce/tinymce": "4.6.6",
         "sonata-project/intl-bundle": "^2.5",
-        "kalamu/cms-admin-bundle": "^1.1.0",
-        "kalamu/cms-core-bundle": "^1.0",
+        "kalamu/cms-admin-bundle": "dev-master",
+        "kalamu/cms-core-bundle": "dev-master",
         "sonata-project/core-bundle": "3.16.1"
     },
     "require-dev":{
