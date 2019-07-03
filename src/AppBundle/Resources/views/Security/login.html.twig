@@ -1,5 +1,6 @@
 {% extends "SonataAdminBundle::standard_layout.html.twig" %}
 {% trans_default_domain 'FOSUserBundle' %}
+
 {% block stylesheets %}
     {{parent()}}
     <link rel="stylesheet" href="{{asset('/bundles/app/css/admin-login.css')}}">
@@ -13,7 +14,7 @@
         <div class="row">
             <div class="col-xs-12">
                 {% if error %}
-                    <div class="alert alert-danger" role="alert"><strong>Error : </strong> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    <div class="alert alert-danger" role="alert"><strong>{{'Error'|trans({}, 'kalamu')}} : </strong> {{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
             </div>
         </div>
@@ -30,27 +31,27 @@
                     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
 
                     <div class="form-group">
-                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                        <label class="sr-only" for="inlineFormInputGroup">{{ 'security.login.username'|trans }}</label>
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                            <input type="text" name="_username" id="username" tabindex="1"  value="{{ last_username }}" required="required" class="form-control" placeholder="Login">
+                            <input type="text" name="_username" id="username" tabindex="1"  value="{{ last_username }}" required="required" class="form-control" placeholder="{{ 'security.login.username'|trans }}">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                        <label class="sr-only" for="inlineFormInputGroup">{{ 'security.login.password'|trans }}</label>
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                             <div class="input-group-addon"><i class="fa fa-lock"></i></div>
-                            <input type="password" name="_password" id="password" tabindex="2" required="required" class="form-control" placeholder="Password">
+                            <input type="password" name="_password" id="password" tabindex="2" required="required" class="form-control" placeholder="{{ 'security.login.password'|trans }}">
                         </div>
                     </div>
 
-                    <button class="btn-primary btn" name="_submit" tabindex="3" type="submit">Connetion</button>
+                    <button class="btn-primary btn" name="_submit" tabindex="3" type="submit">{{ 'security.login.submit'|trans }}</button>
                 </form>
                 <hr>
                 <p>
                     <a href="{{path('cms_homepage')}}">
-                        Go to homepage
+                        {{'Go to homepage'|trans({}, 'kalamu')}}
                     </a>
                 </p>
             </div>

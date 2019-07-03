@@ -1,3 +1,4 @@
+{% trans_default_domain 'kalamu' %}
 
 {% for key, content in paginator if paginator.getPageCount > 0 %}
     <article class="row">
@@ -11,7 +12,7 @@
         <div class="col-md-9">
             <h2><a href="{{cms_link('read', content)}}">{{content.title}}</a></h2>
             <p>{{content.resume|nl2br}}</p>
-            <p>Published by {{content.createdBy}}, the {{content.publishedAt|format_datetime}}
+            <p>{{ 'Published by %name%, the %date%'|trans({'%name%': content.createdBy, '%date%': content.publishedAt|format_datetime}) }}
             {% for taxonomy in content.getUsedTaxonomies() %}
                 <p><strong>{{taxonomy}}:</strong>
                 {% for term in content.getTermsOfTaxonomy(taxonomy) %}
@@ -22,4 +23,3 @@
         </div>
     </article>
 {% endfor %}
-

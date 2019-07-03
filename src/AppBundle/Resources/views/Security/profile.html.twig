@@ -18,19 +18,19 @@
 
                   <ul class="list-group list-group-unbordered">
                     <li class="list-group-item text-left">
-                      <b>Login</b> <a class="pull-right">{{user.username}}</a>
+                      <b>{{ 'security.login.username'|trans }}</b> <a class="pull-right">{{user.username}}</a>
                     </li>
                     <li class="list-group-item text-left">
-                      <b>Last connection</b> <a class="pull-right">{{user.lastLogin|date('d/m/Y - H\\h i')}}</a>
+                      <b>{{'Last connection'|trans({}, 'kalamu')}}</b> <a class="pull-right">{{user.lastLogin|format_datetime}}</a>
                     </li>
                     {% if user.superAdmin %}
                     <li class="list-group-item text-left bg-yellow" style="padding-left: 1em">
-                        <b><i class="fa fa-star"></i> You are super administrator!</b>
+                        <b><i class="fa fa-star"></i> {{ 'You are super administrator !'|trans({}, 'kalamu') }}</b>
                     </li>
                     {% endif %}
                   </ul>
 
-                  <a href="{{path('fos_user_security_profile_edit')}}" class="btn btn-primary btn-block"><b>Edit my profile</b></a>
+                  <a href="{{path('fos_user_security_profile_edit')}}" class="btn btn-primary btn-block"><b>{{ 'Edit my profile'|trans({}, 'kalamu') }}</b></a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="box box-primary">
                 <div class="box-header">
                     <h4 class="box-title">
-                        Access groups
+                        {{ 'Access groups'|trans({}, 'kalamu') }}
                     </h4>
                 </div>
                 <div class="box-body box-profile text-center">
@@ -50,7 +50,7 @@
                         </li>
                     {% else %}
                         <li class="list-group-item text-center">
-                            <em>Your are in no group</em>
+                            <em>{{ 'Your are in no group'|trans({}, 'kalamu') }}</em>
                         </li>
                     {% endfor %}
                   </ul>

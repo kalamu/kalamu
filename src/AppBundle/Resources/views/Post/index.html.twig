@@ -1,9 +1,10 @@
 {% extends (parent_template is defined ? parent_template : 'AppBundle:Site:base.html.twig') %}
-{% block site_title %}Posts . {{parent()}}{% endblock site_title %}
+{% trans_default_domain 'kalamu' %}
+{% block site_title %}{{ 'Posts'|trans }} . {{parent()}}{% endblock site_title %}
 
 {% block content %}
 
-    <h1>Post list</h1>
+    <h1>{{ 'Post list'|trans }}</h1>
 
     {% include 'AppBundle:Content:list.html.twig' %}
 
