@@ -222,12 +222,6 @@ liip_imagine:
             filters:
                 thumbnail: { size: [1900, 500], mode: inbound }
 
-kalamu_dynamique_config:
-    base_configurator_template: AppBundle:Config:base.html.twig
-    configurator:
-        default_template: {label: <i class="fa fa-eye fa-fw"></i> Template configuration, controller: AppBundle:Admin\Config:template, priority: 10}
-        cms_main: {label: '<i class="fa fa-gears fa-fw"></i> CMS configuration', controller: 'AppBundle:Admin\Config:main', priority: 5}
-
 
 kalamu_dashboard:
     contexts:
