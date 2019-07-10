@@ -3,14 +3,6 @@ parameters:
     app.locales: en|fr
 
 services:
-    site.twig_extension:
-        class: AppBundle\Twig\SiteExtension
-        public: false
-        arguments:
-            - '@kalamu_dynamique_config'
-        tags:
-            - { name: twig.extension }
-
     twig.extension.intl:
         class: Twig_Extensions_Extension_Intl
         tags:
