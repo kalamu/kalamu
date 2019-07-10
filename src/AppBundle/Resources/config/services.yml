@@ -1,17 +1,5 @@
 services:
 
-    # Registry of dashboard managers
-    kalamu.dashboard_registry:
-        class: AppBundle\Manager\DashboardRegistry
-
-    # Stockage de dashboard sur utilisateur
-    kalamu.dashboard.manager.user:
-        class: AppBundle\Manager\DashboardUserManager
-        arguments: ['@doctrine', '@security.context']
-        tags:
-            - { name: dashboard_storage , alias: user }
-
-
     # Security voter to give full access to the super admin
     kalamu.security.voter.super_admin:
         class: AppBundle\Voter\SuperAdminVoter
