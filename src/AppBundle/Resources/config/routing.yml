@@ -21,9 +21,3 @@ fos_user_security_profile:
 fos_user_security_profile_edit:
     path:     /profile/edit
     defaults: { _controller: AppBundle:Admin\Security:profileEdit }
-
-
-# Route for the dashboards API (admin homepage and edition)
-kalamu_default_site_dashboard_api:
-    resource: "@AppBundle/Resources/config/routing/dashboard_api.yml"
-    prefix:   /dashboard_storage/api
