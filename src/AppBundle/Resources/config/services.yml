@@ -11,14 +11,6 @@ services:
         tags:
             - { name: dashboard_storage , alias: user }
 
-    # block sonata for administration homepage (display the dashboard)
-    kalamu.sonata_block.dashboard:
-        class: AppBundle\SonataBlock\DashboardBlock
-        arguments:
-            - '@twig'
-        tags:
-            - { name: sonata.block }
-
 
     # Security voter to give full access to the super admin
     kalamu.security.voter.super_admin:
