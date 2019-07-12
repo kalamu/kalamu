@@ -240,6 +240,7 @@ kalamu_dashboard:
                 cms.section:
                     standard:
                         - kalamu_cms.element.cms.section_standard
+        user_dashboard:
             types:
                 cms.infos:
                     default:
