@@ -12,34 +12,35 @@
     "require": {
         "php": ">=7.1",
         "ext-gd": "*",
-        "symfony/symfony": "~2.8",
-        "doctrine/orm": "^2.4.8",
-        "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "sensio/distribution-bundle": "^5.0.19",
+        "sensio/framework-extra-bundle": "^5.0.0",
+        "symfony/symfony": "^3.4",
         "symfony/assetic-bundle": "~2.3",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.4",
-        "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0",
+        "symfony/swiftmailer-bundle": "^2.6.4",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "incenteev/composer-parameter-handler": "^2.0",
         "ircmaxell/password-compat": "~1.0",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*",
         "knplabs/doctrine-behaviors": "1.1.*",
-        "kalamu/menu-service-bundle": "^1.1",
         "twig/extensions": "^1.3",
+        "tinymce/tinymce": "4.6.6",
         "sonata-project/admin-bundle": "^3.16",
         "sonata-project/doctrine-orm-admin-bundle": "^3.1",
-        "tinymce/tinymce": "4.6.6",
         "sonata-project/intl-bundle": "^2.5",
+        "sonata-project/core-bundle": "3.16.1",
+        "kalamu/menu-service-bundle": "^1.1",
         "kalamu/cms-admin-bundle": "dev-master",
         "kalamu/cms-core-bundle": "dev-master",
-        "kalamu/default-bootstrap-elements-bundle": "dev-master",
-        "sonata-project/core-bundle": "3.16.1"
+        "kalamu/default-bootstrap-elements-bundle": "dev-master"
     },
     "require-dev":{
-        "sensio/generator-bundle": "~2.3",
-        "sensio/distribution-bundle": "~4.0"
+        "sensio/generator-bundle": "^3.0"
     },
     "scripts": {
-        "post-install-cmd": [
+        "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -48,18 +49,18 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
             "Stfalcon\\Bundle\\TinymceBundle\\Composer\\ScriptHandler::createSymlink"
         ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
         "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "Stfalcon\\Bundle\\TinymceBundle\\Composer\\ScriptHandler::createSymlink"
+            "@symfony-scripts"
         ]
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": {
+            "AppBundle\\": "src/AppBundle"
+        },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "config": {
         "bin-dir": "bin",
@@ -69,7 +70,10 @@
     "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
         "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
