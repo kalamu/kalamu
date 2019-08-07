@@ -8,6 +8,3 @@ services:
             - { name: security.voter }
 
 
-    # Section elements for content edition
-    kalamu_cms.element.cms.section_standard:
-        class: AppBundle\Section\SectionStandard

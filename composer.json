@@ -22,7 +22,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "ircmaxell/password-compat": "~1.0",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
-	"knplabs/doctrine-behaviors": "1.1.*",
+        "knplabs/doctrine-behaviors": "1.1.*",
         "kalamu/menu-service-bundle": "^1.1",
         "twig/extensions": "^1.3",
         "sonata-project/admin-bundle": "^3.16",
@@ -31,6 +31,7 @@
         "sonata-project/intl-bundle": "^2.5",
         "kalamu/cms-admin-bundle": "dev-master",
         "kalamu/cms-core-bundle": "dev-master",
+        "kalamu/default-bootstrap-elements-bundle": "dev-master",
         "sonata-project/core-bundle": "3.16.1"
     },
     "require-dev":{

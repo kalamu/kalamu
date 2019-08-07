@@ -230,6 +230,7 @@ kalamu_dashboard:
                 cms.content:
                     standard:
                         - kalamu_cms.element.cms.wysiwyg
+                        - kalamu_cms.element.cms.alert
                     media:
                         - kalamu_cms.element.cms.image
                         - kalamu_cms.element.cms.youtube
@@ -274,4 +275,3 @@ kalamu_menu_service:
                     - {label: "Publish status", route: admin_kalamu_cmsadmin_publishstatus_list, icon: '<i class="fa fa-fw fa-folder"></i>', roles: [ROLE_KALAMU_CMS_ADMIN_ADMIN_PUBLISH_STATUS_LIST] }
                     - {label: "Terms", route: admin_kalamu_cmsadmin_term_list, icon: '<i class="fa fa-fw fa-folder"></i>', roles: [ROLE_KALAMU_CMS_ADMIN_ADMIN_TERM_LIST] }
                     - {label: "Taxonomies", route: admin_kalamu_cmsadmin_taxonomy_list, icon: '<i class="fa fa-fw fa-folder"></i>', roles: [ROLE_KALAMU_CMS_ADMIN_ADMIN_TAXONOMY_LIST] }
-

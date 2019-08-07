@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62886a96f7ffabb559a1d0ff8b358b54",
+    "content-hash": "145e2cc6cb5c100f17bebf0f621ecf2d",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1971,12 +1971,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-admin-bundle.git",
-                "reference": "16cc1b6716a596e45e0e6a4fbe02e62799f1964f"
+                "reference": "f4da048d25fe7231af3ac82babbc30a11e66f7c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/16cc1b6716a596e45e0e6a4fbe02e62799f1964f",
-                "reference": "16cc1b6716a596e45e0e6a4fbe02e62799f1964f",
+                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/f4da048d25fe7231af3ac82babbc30a11e66f7c1",
+                "reference": "f4da048d25fe7231af3ac82babbc30a11e66f7c1",
                 "shasum": ""
             },
             "require": {
@@ -2012,7 +2012,7 @@
                 }
             ],
             "description": "Administration interface for Kalamu CMS",
-            "time": "2019-06-28T13:53:07+00:00"
+            "time": "2019-07-12T12:17:14+00:00"
         },
         {
             "name": "kalamu/cms-core-bundle",
@@ -2106,6 +2106,48 @@
             ],
             "description": "Configurable Bootstrap dashboard for Kalamu",
             "time": "2019-01-25T05:16:33+00:00"
+        },
+        {
+            "name": "kalamu/default-bootstrap-elements-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kalamu/default-bootstrap-elements-bundle.git",
+                "reference": "8ec6f3579edbfd6461ef2ab98704fb5a0f872568"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kalamu/default-bootstrap-elements-bundle/zipball/8ec6f3579edbfd6461ef2ab98704fb5a0f872568",
+                "reference": "8ec6f3579edbfd6461ef2ab98704fb5a0f872568",
+                "shasum": ""
+            },
+            "require": {
+                "kalamu/cms-admin-bundle": "^1.1.0",
+                "kalamu/dashboard-bundle": "^1.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kalamu\\DefaultBootstrapElementsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johan DESMYTER",
+                    "email": "johan@etic.yt"
+                }
+            ],
+            "description": "Bootstrap elements to compose content on Kalamu CMS",
+            "time": "2019-08-06T13:40:15+00:00"
         },
         {
             "name": "kalamu/dynamique-config-bundle",
@@ -6617,7 +6659,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kalamu/cms-admin-bundle": 20,
-        "kalamu/cms-core-bundle": 20
+        "kalamu/cms-core-bundle": 20,
+        "kalamu/default-bootstrap-elements-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
