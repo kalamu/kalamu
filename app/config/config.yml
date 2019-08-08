@@ -146,7 +146,6 @@ kalamu_cms_core:
             label: Terms
             entity: KalamuCmsAdminBundle:Term
             template: AppBundle:Term:term.html.twig
-            controller_read: AppBundle:Term:read
             has_index: false
             default_menu_item_picker: true
             stringifier: libelle

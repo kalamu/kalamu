@@ -2309,12 +2309,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-admin-bundle.git",
-                "reference": "61ed6ebe22a2051f4531a1d9a8d81c9265c9411f"
+                "reference": "81d4292c15fcda6349fa61731eeab6d495cfdfd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/61ed6ebe22a2051f4531a1d9a8d81c9265c9411f",
-                "reference": "61ed6ebe22a2051f4531a1d9a8d81c9265c9411f",
+                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/81d4292c15fcda6349fa61731eeab6d495cfdfd7",
+                "reference": "81d4292c15fcda6349fa61731eeab6d495cfdfd7",
                 "shasum": ""
             },
             "require": {
@@ -2353,7 +2353,7 @@
                 }
             ],
             "description": "Administration interface for Kalamu CMS",
-            "time": "2019-08-07T12:48:19+00:00"
+            "time": "2019-08-08T09:01:41+00:00"
         },
         {
             "name": "kalamu/cms-core-bundle",
@@ -2361,12 +2361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-core-bundle.git",
-                "reference": "684df5e3291508e4d79fdfee5e889976f647fdc0"
+                "reference": "09d2cf886fa44e955574a6034cb547178ee4aa9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/684df5e3291508e4d79fdfee5e889976f647fdc0",
-                "reference": "684df5e3291508e4d79fdfee5e889976f647fdc0",
+                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/09d2cf886fa44e955574a6034cb547178ee4aa9a",
+                "reference": "09d2cf886fa44e955574a6034cb547178ee4aa9a",
                 "shasum": ""
             },
             "require": {
@@ -2402,7 +2402,7 @@
                 }
             ],
             "description": "Core functionalites for Kalamu CMS",
-            "time": "2019-08-07T08:59:29+00:00"
+            "time": "2019-08-08T08:57:55+00:00"
         },
         {
             "name": "kalamu/dashboard-bundle",
