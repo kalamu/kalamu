@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * CompilerPass to registe the dashboard storages
+ * CompilerPass to register the dashboard storages
  */
 class CmsCompilerPass implements CompilerPassInterface
 {

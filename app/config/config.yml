@@ -165,7 +165,7 @@ fos_user:
 fm_elfinder:
     instances:
         img_cms:
-            locale: %locale% # defaults to current request locale
+            locale: '%locale%' # defaults to current request locale
             editor: form # other options are tinymce, tinymce4, fm_tinymce,  form, simple, custom
             #editor_template: set custom template for your editor # default null
             #path_prefix: /
@@ -186,7 +186,7 @@ fm_elfinder:
                         #attributes: example of setting attributes permission
                         #    - { pattern: '/(.*?)/', read: true, write: false, locked: true }
         docs_cms:
-            locale: %locale% # defaults to current request locale
+            locale: '%locale%' # defaults to current request locale
             editor: form
             include_assets: true
             connector:
