@@ -34,8 +34,10 @@
         "kalamu/menu-service-bundle": "^1.1",
         "kalamu/cms-admin-bundle": "dev-master",
         "kalamu/cms-core-bundle": "dev-master",
+        "kalamu/template-implementation": "1.0.0",
         "kalamu/dynamique-config-bundle": "dev-master",
-        "kalamu/default-bootstrap-elements-bundle": "dev-master"
+        "kalamu/default-bootstrap-elements-bundle": "dev-master",
+        "kalamu/default-bootstrap-template-bundle": "dev-master"
     },
     "require-dev":{
         "sensio/generator-bundle": "^3.0"
@@ -59,7 +61,8 @@
     },
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "AppBundle\\": "src/AppBundle",
+            "Kalamu\\DefaultBootstrapTemplateBundle\\": "src/Kalamu/DefaultBootstrapTemplateBundle"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },

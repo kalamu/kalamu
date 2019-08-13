@@ -1,3 +1,7 @@
+kalamu_default_bootstrap_template_bundle:
+    resource: "@KalamuDefaultBootstrapTemplateBundle/Resources/config/routing.yml"
+    prefix:   /_fragment
+
 kalamu_cms_admin:
     resource: "@KalamuCmsAdminBundle/Resources/config/routing.yml"
     prefix:   /admin

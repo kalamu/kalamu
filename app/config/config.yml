@@ -6,7 +6,7 @@ imports:
 
 
 framework:
-    #esi:             ~
+    esi: { enabled: true }
     translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
@@ -25,7 +25,7 @@ framework:
     session:
         handler_id: session.handler.native_file
         save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
-    fragments:       ~
+    fragments: { path: /_fragment }
     http_method_override: true
     assets: ~
     php_errors:
@@ -112,13 +112,12 @@ kalamu_cms_core:
 #            title: Public
 #            prefix: /
     types:
-        -
-            name: page
+        page:
             label: Pages
             entity: KalamuCmsAdminBundle:Page
             identifier: slug
             has_index: false
-            template: AppBundle:Site:page.html.twig
+#            template: AppBundle:Site:page.html.twig
 #            templates:
 #                standard:
 #                    title: Standard
@@ -129,23 +128,21 @@ kalamu_cms_core:
 #            contexts:
 #                private_space: []
 #                public: []
-        -
-            name: post
+        post:
             label: Posts
             entity: KalamuCmsAdminBundle:Post
             identifier: slug
             has_index: true
-            template: AppBundle:Post:post.html.twig
-            template_index: AppBundle:Post:index.html.twig
-            max_per_page: 5
+#            template: AppBundle:Post:post.html.twig
+#            template_index: AppBundle:Post:index.html.twig
+            max_per_page: 1
 #            contexts:
 #                private_space: []
 #                public: []
-        -
-            name: term
+        term:
             label: Terms
             entity: KalamuCmsAdminBundle:Term
-            template: AppBundle:Term:term.html.twig
+#            template: AppBundle:Term:term.html.twig
             has_index: false
             default_menu_item_picker: true
             stringifier: libelle

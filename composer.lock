@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08fe0345ad5bb186705dc4517e4c0444",
+    "content-hash": "941350f83e40f0bb88ea6a79f4043589",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2309,12 +2309,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-admin-bundle.git",
-                "reference": "81d4292c15fcda6349fa61731eeab6d495cfdfd7"
+                "reference": "91997996db06189b5b8e413fd6f28336d5c655e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/81d4292c15fcda6349fa61731eeab6d495cfdfd7",
-                "reference": "81d4292c15fcda6349fa61731eeab6d495cfdfd7",
+                "url": "https://api.github.com/repos/kalamu/cms-admin-bundle/zipball/91997996db06189b5b8e413fd6f28336d5c655e9",
+                "reference": "91997996db06189b5b8e413fd6f28336d5c655e9",
                 "shasum": ""
             },
             "require": {
@@ -2353,7 +2353,7 @@
                 }
             ],
             "description": "Administration interface for Kalamu CMS",
-            "time": "2019-08-08T09:01:41+00:00"
+            "time": "2019-08-08T13:18:48+00:00"
         },
         {
             "name": "kalamu/cms-core-bundle",
@@ -2361,12 +2361,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/cms-core-bundle.git",
-                "reference": "09d2cf886fa44e955574a6034cb547178ee4aa9a"
+                "reference": "aac2c93fc1fdabf039cc6287f16aabf4007ed746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/09d2cf886fa44e955574a6034cb547178ee4aa9a",
-                "reference": "09d2cf886fa44e955574a6034cb547178ee4aa9a",
+                "url": "https://api.github.com/repos/kalamu/cms-core-bundle/zipball/aac2c93fc1fdabf039cc6287f16aabf4007ed746",
+                "reference": "aac2c93fc1fdabf039cc6287f16aabf4007ed746",
                 "shasum": ""
             },
             "require": {
@@ -2402,7 +2402,7 @@
                 }
             ],
             "description": "Core functionalites for Kalamu CMS",
-            "time": "2019-08-08T08:57:55+00:00"
+            "time": "2019-08-13T08:25:55+00:00"
         },
         {
             "name": "kalamu/dashboard-bundle",
@@ -2454,12 +2454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/default-bootstrap-elements-bundle.git",
-                "reference": "785bb325a20e8845c05cf815c7160ed3c5cc6519"
+                "reference": "0cbd770af1a836c3098d0fb45840d7a66be7bf76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/default-bootstrap-elements-bundle/zipball/785bb325a20e8845c05cf815c7160ed3c5cc6519",
-                "reference": "785bb325a20e8845c05cf815c7160ed3c5cc6519",
+                "url": "https://api.github.com/repos/kalamu/default-bootstrap-elements-bundle/zipball/0cbd770af1a836c3098d0fb45840d7a66be7bf76",
+                "reference": "0cbd770af1a836c3098d0fb45840d7a66be7bf76",
                 "shasum": ""
             },
             "require": {
@@ -2488,7 +2488,52 @@
                 }
             ],
             "description": "Bootstrap elements to compose content on Kalamu CMS",
-            "time": "2019-08-07T12:48:51+00:00"
+            "time": "2019-08-13T08:27:00+00:00"
+        },
+        {
+            "name": "kalamu/default-bootstrap-template-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kalamu/default-bootstrap-template-bundle.git",
+                "reference": "885619ee8ebd7ef40342cadc430ba7f0e23c262b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kalamu/default-bootstrap-template-bundle/zipball/885619ee8ebd7ef40342cadc430ba7f0e23c262b",
+                "reference": "885619ee8ebd7ef40342cadc430ba7f0e23c262b",
+                "shasum": ""
+            },
+            "require": {
+                "kalamu/cms-core-bundle": "^1.0.0@dev",
+                "kalamu/default-bootstrap-elements-bundle": "^1.0.0@dev"
+            },
+            "provide": {
+                "kalamu/template-implementation": "1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kalamu\\DefaultBootstrapTemplateBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johan DESMYTER",
+                    "email": "johan@etic.yt"
+                }
+            ],
+            "description": "Default Bootstrap template for Kalamu CMS",
+            "time": "2019-08-13T13:42:53+00:00"
         },
         {
             "name": "kalamu/dynamique-config-bundle",
@@ -2496,12 +2541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalamu/dynamique-config-bundle.git",
-                "reference": "a8ce3c50cb28e28c93e33a17fcf12f66fe4fd608"
+                "reference": "669705a7faddbc3cdff9a43c2110e5fd3378eb59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalamu/dynamique-config-bundle/zipball/a8ce3c50cb28e28c93e33a17fcf12f66fe4fd608",
-                "reference": "a8ce3c50cb28e28c93e33a17fcf12f66fe4fd608",
+                "url": "https://api.github.com/repos/kalamu/dynamique-config-bundle/zipball/669705a7faddbc3cdff9a43c2110e5fd3378eb59",
+                "reference": "669705a7faddbc3cdff9a43c2110e5fd3378eb59",
                 "shasum": ""
             },
             "require": {
@@ -2529,7 +2574,7 @@
                 }
             ],
             "description": "A configuration container independant of Symfony.",
-            "time": "2019-08-08T13:13:25+00:00"
+            "time": "2019-08-13T13:48:33+00:00"
         },
         {
             "name": "kalamu/menu-service-bundle",
@@ -7480,7 +7525,8 @@
         "kalamu/cms-admin-bundle": 20,
         "kalamu/cms-core-bundle": 20,
         "kalamu/dynamique-config-bundle": 20,
-        "kalamu/default-bootstrap-elements-bundle": 20
+        "kalamu/default-bootstrap-elements-bundle": 20,
+        "kalamu/default-bootstrap-template-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -42,6 +42,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Kalamu\CmsAdminBundle\KalamuCmsAdminBundle(),
             new Kalamu\DefaultBootstrapElementsBundle\KalamuDefaultBootstrapElementsBundle(),
+            new Kalamu\DefaultBootstrapTemplateBundle\KalamuDefaultBootstrapTemplateBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {
