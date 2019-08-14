@@ -1,5 +1,4 @@
 View my profile: Voir mon profil
-Edit my profile: Éditer mon profil
 Logout: Déconnexion
 Save: Enregistrer
 Cancel: Annuler
@@ -12,11 +11,3 @@ Next page: Page suivante
 Next: Suivant
 Posts: Articles
 Post list: Liste des articles
-Error: Erreur
-Go to homepage: Aller à la page d'accueil
-Last connection: Dernière connexion
-You are super administrator !: Vous êtes super administrateur !
-Access groups: Groupes d'accès
-Your are in no group: Vous n'êtes dans aucun groupe
-Password strength: Fiabilité du mot de passe
-password_strength_help: La force de votre mot de passe dépends de la diversité des caractères. Pensez à utiliser des lettres, chiffres et caractères spéciaux.
